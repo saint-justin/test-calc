@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16pt;
+}
+
+.bg {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  justify-content: center;
+  align-items: center
+}
+
+#calc-wrapper {
+  width: 300px;
+  height: 500px;
+  background-color: red;
+  padding: 16px;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: 
+  "out out out out"
+  "mod div mult minus"
+  "num7 num8 num9 plus"
+  "num4 num5 num6 plus"
+  "num1 num2 num3 equals"
+  "num0 num0 num0 equals";
+}
+
+#btn-0 { grid-area: num0 };
+#btn-1 { grid-area: num1 };
+#btn-2 { grid-area: num2 };
+#btn-3 { grid-area: num3 };
+#btn-4 { grid-area: num4 };
+#btn-5 { grid-area: num5 };
+#btn-6 { grid-area: num6 };
+#btn-7 { grid-area: num7 };
+#btn-8 { grid-area: num8 };
+#btn-9 { grid-area: num9 };
+#btn-add { grid-area: plus };
+#btn-sub { grid-area: minus };
+#btn-mul { grid-area: mult };
+#btn-div { grid-area: div };
+#btn-eql { grid-area: equals }; 
+#btn-mod { grid-area: mod}
+
+#output-wrapper { 
+  grid-area: out;
+  display: flex;
+  background-color: orange;
+  align-self: stretch;
+  justify-self: stretch;
+  justify-content: center;
+  align-items: center;
+}
+
+#output {
+  background-color: yellow;
+  font-size: 150%;
+}
